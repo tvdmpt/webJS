@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат конвертации</title>
+</head>
+<body>
+<h2>Результат конвертации</h2>
+
+<p th:text="'Сумма: ' + ${amount} + ' ' + ${fromCurrency}"></p>
+<p th:text="'Курс: 1 ' + ${fromCurrency} + ' = ' + ${rate} + ' ' + ${toCurrency}"></p>
+<p th:text="'Результат: ' + ${result} + ' ' + ${toCurrency}"></p>
+
+<br>
+<a href="/converter">Новая конвертация</a>
+<br>
+<a href="/">На главную</a>
+</body>
+</html>

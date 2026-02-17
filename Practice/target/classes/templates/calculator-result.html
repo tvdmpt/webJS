@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат вычислений</title>
+</head>
+<body>
+<h2>Результат вычислений</h2>
+
+<div th:if="${error}">
+    <p style="color: red;" th:text="${error}"></p>
+</div>
+
+<div th:unless="${error}">
+    <p th:text="'Число 1: ' + ${num1}"></p>
+    <p th:text="'Число 2: ' + ${num2}"></p>
+    <p th:text="'Результат: ' + ${result}"></p>
+</div>
+
+<br>
+<a href="/calculator">Новое вычисление</a>
+<br>
+<a href="/">На главную</a>
+</body>
+</html>
